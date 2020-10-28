@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 extension ImageGalleryView: UICollectionViewDataSource {
@@ -45,3 +46,4 @@ extension ImageGalleryView: UICollectionViewDataSource {
     return cell
   }
 }
+#endif

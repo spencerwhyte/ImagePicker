@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 // MARK: - BottomContainer autolayout
@@ -188,3 +189,4 @@ extension ButtonPicker {
     }
   }
 }
+#endif

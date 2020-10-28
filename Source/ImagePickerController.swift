@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import MediaPlayer
 import Photos
@@ -540,3 +541,4 @@ extension ImagePickerController: ImageGalleryPanGestureDelegate {
     }
   }
 }
+#endif

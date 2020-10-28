@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 protocol ButtonPickerDelegate: class {
@@ -102,3 +103,4 @@ class ButtonPicker: UIButton {
     backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
   }
 }
+#endif

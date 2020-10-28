@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 protocol BottomContainerViewDelegate: class {
@@ -125,3 +126,4 @@ extension BottomContainerView: ButtonPickerDelegate {
     delegate?.pickerButtonDidPress()
   }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import AVFoundation
 import PhotosUI
@@ -248,3 +249,4 @@ class CameraMan {
     ]
   }
 }
+#endif

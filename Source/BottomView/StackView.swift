@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import Photos
 
@@ -172,3 +173,4 @@ extension ImageStackView {
     })
   }
 }
+#endif

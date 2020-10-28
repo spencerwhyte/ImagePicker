@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 class ImageGalleryViewCell: UICollectionViewCell {
@@ -47,3 +48,4 @@ class ImageGalleryViewCell: UICollectionViewCell {
     imageView.image = image
   }
 }
+#endif

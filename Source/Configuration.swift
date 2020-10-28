@@ -1,5 +1,7 @@
+#if canImport(UIKit)
 import AVFoundation
 import UIKit
+
 
 @objc public class Configuration: NSObject {
 
@@ -109,3 +111,4 @@ extension Configuration {
     return Helper.getTransform(fromDeviceOrientation: Helper.previousOrientation)
   }
 }
+#endif

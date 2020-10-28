@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import AVFoundation
 import PhotosUI
@@ -321,3 +322,4 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
     setupPreviewLayer()
   }
 }
+#endif

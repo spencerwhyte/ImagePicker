@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 class VideoInfoView: UIView {
@@ -50,3 +51,4 @@ class VideoInfoView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 }
+#endif

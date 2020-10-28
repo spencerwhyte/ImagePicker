@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 protocol TopViewDelegate: class {
@@ -117,3 +118,4 @@ open class TopView: UIView {
     delegate?.rotateDeviceDidPress()
   }
 }
+#endif

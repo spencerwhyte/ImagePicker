@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 class ImageGalleryLayout: UICollectionViewFlowLayout {
@@ -28,3 +29,4 @@ class ImageGalleryLayout: UICollectionViewFlowLayout {
     return newAttributes
   }
 }
+#endif

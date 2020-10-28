@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import Photos
 
@@ -31,3 +32,4 @@ open class ImageStack {
     return assets.contains(asset)
   }
 }
+#endif

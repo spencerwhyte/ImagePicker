@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import AVFoundation
 
@@ -45,3 +46,4 @@ struct Helper {
     }
   }
 }
+#endif

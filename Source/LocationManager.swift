@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import CoreLocation
 
@@ -35,3 +36,4 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
   }
 }
+#endif

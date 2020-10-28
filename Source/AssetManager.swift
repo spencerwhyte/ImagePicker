@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 import Photos
@@ -5,14 +6,7 @@ import Photos
 open class AssetManager {
 
   open static func getImage(_ name: String) -> UIImage {
-    let traitCollection = UITraitCollection(displayScale: 3)
-    var bundle = Bundle(for: AssetManager.self)
-
-    if let resource = bundle.resourcePath, let resourceBundle = Bundle(path: resource + "/ImagePicker.bundle") {
-      bundle = resourceBundle
-    }
-
-    return UIImage(named: name, in: bundle, compatibleWith: traitCollection) ?? UIImage()
+    return UIImage(named: name, in: Bundle.module, compatibleWith: nil) ?? UIImage()
   }
 
   open static func fetch(withConfiguration configuration: Configuration, _ completion: @escaping (_ assets: [PHAsset]) -> Void) {
@@ -68,3 +62,4 @@ open class AssetManager {
     return images
   }
 }
+#endif
