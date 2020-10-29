@@ -5,11 +5,11 @@ import Photos
 
 open class AssetManager {
 
-  open static func getImage(_ name: String) -> UIImage {
+  public static func getImage(_ name: String) -> UIImage {
     return UIImage(named: name, in: Bundle.module, compatibleWith: nil) ?? UIImage()
   }
 
-  open static func fetch(withConfiguration configuration: Configuration, _ completion: @escaping (_ assets: [PHAsset]) -> Void) {
+  public static func fetch(withConfiguration configuration: Configuration, _ completion: @escaping (_ assets: [PHAsset]) -> Void) {
     guard PHPhotoLibrary.authorizationStatus() == .authorized else { return }
 
     DispatchQueue.global(qos: .background).async {
@@ -30,7 +30,7 @@ open class AssetManager {
     }
   }
 
-  open static func resolveAsset(_ asset: PHAsset, size: CGSize = CGSize(width: 720, height: 1280), shouldPreferLowRes: Bool = false, completion: @escaping (_ image: UIImage?) -> Void) {
+  public static func resolveAsset(_ asset: PHAsset, size: CGSize = CGSize(width: 720, height: 1280), shouldPreferLowRes: Bool = false, completion: @escaping (_ image: UIImage?) -> Void) {
     let imageManager = PHImageManager.default()
     let requestOptions = PHImageRequestOptions()
     requestOptions.deliveryMode = shouldPreferLowRes ? .fastFormat : .highQualityFormat
@@ -45,7 +45,7 @@ open class AssetManager {
     }
   }
 
-  open static func resolveAssets(_ assets: [PHAsset], size: CGSize = CGSize(width: 720, height: 1280)) -> [UIImage] {
+  public static func resolveAssets(_ assets: [PHAsset], size: CGSize = CGSize(width: 720, height: 1280)) -> [UIImage] {
     let imageManager = PHImageManager.default()
     let requestOptions = PHImageRequestOptions()
     requestOptions.isSynchronous = true
